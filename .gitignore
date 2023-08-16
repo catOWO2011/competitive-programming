@@ -1,4 +1,5 @@
 *.out
 *.txt
 *.class
+./LeetCode/Solution.java
 settings.json
