@@ -32,7 +32,7 @@ number of actions(decreases and increases) = 3 + 5 + 7 + 9 + 9 = 33
 import java.util.Scanner;
 
 public class p1700C {
-  public static void main(String[]args) {
+  public static void main(String[] args) {
     new p1700C().solve();
   }
 
@@ -44,7 +44,7 @@ public class p1700C {
     while (t-- > 0) {
       int n = in.nextInt();
 
-      long[]a = new long[n];
+      long[] a = new long[n];
 
       for (int i = 0; i < a.length; i++) {
         a[i] = in.nextLong();
@@ -52,12 +52,12 @@ public class p1700C {
 
       long minimumActionsNumber = 0;
       long carry = 0; // this takes the decreases to the left (suffix)
-      
+
       for (int i = 1; i < a.length; i++) {
         a[i] += carry;
         // System.out.println(Arrays.toString(a) + " current carry " + carry);
-        if (a[i] != a[i- 1]) {
-          long diff = a[i] - a[i- 1];
+        if (a[i] != a[i - 1]) {
+          long diff = a[i] - a[i - 1];
 
           if (diff < 0) {
             // prefix
@@ -75,6 +75,8 @@ public class p1700C {
 
       System.out.println(minimumActionsNumber + Math.abs(a[a.length - 1]));
     }
+
+    in.close();
   }
 
 }
