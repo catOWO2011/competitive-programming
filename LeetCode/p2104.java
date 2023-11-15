@@ -31,7 +31,22 @@ public class p2104 {
   }
 
   /**
-   * Returns the sum of the elements
+   * Returns the sum of the elements that has the possible subarray using
+   * multiplication principle e.g
+   * 4, 3, [10], 7, 6, 11 (for the number 10 we have the following places to
+   * set the two brackets)
+   * 
+   * [4 [3 [10] 7] 6] it will 3 lefts bracket and 4 right brackets so the total
+   * subarrays with 10 as the largest element it will be 3 * 3 = 9
+   * [10]
+   * [3, 10]
+   * [4, 3, 10]
+   * [4, 3, 10, 7]
+   * [4, 3, 10, 7, 6]
+   * [3, 10, 7]
+   * [3, 10, 7, 6]
+   * [10, 7]
+   * [10, 7, 6]
    * 
    * @param nums
    * @param currentIndex
